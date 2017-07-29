@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+body {
+	background: #f1f1f1;
+	overflow: hidden;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dog {
+	width: 90%;
+	margin-top: 10px;
+	background: #fff;
+	text-align: center;
+	border: 2px solid #CCC;
+	border-top: 1px solid #CCC;
+}
+
+.picture {
+	height: auto;
+	max-height: 400px;
+	overflow: hidden;
+}
+
+#PhotoDog {
+	width: 90%;
+	margin-top: 5%;
+}
+
+@keyframes like {
+  0% {
+	opacity: 1;
+	margin-left: 0;
+  }
+  33%{
+	opacity: 0;
+	margin-right: 180%;
+  }
+  66%{
+	opacity: 0;
+	margin-left: 0;
+	margin-right: -180%;
+  }
+  100%{
+	opacity: 1;
+	margin-left: 0;
+	margin-right: 0;
+  }
+}
+
+.translike {
+	animation-name: like;
+    animation-duration: 2.5s;
+}
+
+@keyframes dlike {
+  0% {
+	opacity: 1;
+	margin-left: 0;
+  }
+  33%{
+	opacity: 0;
+	margin-left: 0;
+	margin-right: -180%;
+  }
+  66%{
+	opacity: 0;
+	margin-left: 0;
+	margin-right: 180%;
+  }
+  100%{
+	opacity: 1;
+	margin-left: 0;
+	margin-right: 0;
+  }
+}
+
+.transdislike {
+	animation-name: dlike;
+    animation-duration: 2.5s;
+}
+
+#raza {
+	text-transform: capitalize;
+	font-size: 2em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #666
+}
+
+.botones {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	width: 90%;
+	font-size: 100px;
+}
+
+.botones i {
+	margin-left: 15%;
+	margin-right: 15%;
+	cursor: pointer;
+}
+
+.botones i:first-child {
+	color: green
+}
+
+.botones i:last-child {
+	color: red
+}
+
+@media (min-width: 600px) {
+  .dog {
+	width: 40%
+  }
+
+  .botones i {
+  	margin-left: 5%;
+	margin-right: 5%;
+  }
+}
